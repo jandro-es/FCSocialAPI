@@ -1,0 +1,490 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B109A8D618001D8E00CF514D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109A8D518001D8E00CF514D /* Foundation.framework */; };
+		B109A8D818001D8E00CF514D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109A8D718001D8E00CF514D /* CoreGraphics.framework */; };
+		B109A8DA18001D8E00CF514D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109A8D918001D8E00CF514D /* UIKit.framework */; };
+		B109A8E018001D8E00CF514D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B109A8DE18001D8E00CF514D /* InfoPlist.strings */; };
+		B109A8E218001D8E00CF514D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A8E118001D8E00CF514D /* main.m */; };
+		B109A8E618001D8E00CF514D /* FCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A8E518001D8E00CF514D /* FCAppDelegate.m */; };
+		B109A8E918001D8E00CF514D /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B109A8E718001D8E00CF514D /* Main_iPhone.storyboard */; };
+		B109A8EC18001D8E00CF514D /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B109A8EA18001D8E00CF514D /* Main_iPad.storyboard */; };
+		B109A8EF18001D8E00CF514D /* FCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A8EE18001D8E00CF514D /* FCViewController.m */; };
+		B109A8F118001D8E00CF514D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B109A8F018001D8E00CF514D /* Images.xcassets */; };
+		B109A8F818001D8E00CF514D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109A8F718001D8E00CF514D /* XCTest.framework */; };
+		B109A8F918001D8E00CF514D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109A8D518001D8E00CF514D /* Foundation.framework */; };
+		B109A8FA18001D8E00CF514D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109A8D918001D8E00CF514D /* UIKit.framework */; };
+		B109A90218001D8E00CF514D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B109A90018001D8E00CF514D /* InfoPlist.strings */; };
+		B109A90418001D8E00CF514D /* FCSocialAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A90318001D8E00CF514D /* FCSocialAPITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B109A8FB18001D8E00CF514D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B109A8CA18001D8E00CF514D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B109A8D118001D8E00CF514D;
+			remoteInfo = FCSocialAPI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B109A8D218001D8E00CF514D /* FCSocialAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FCSocialAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B109A8D518001D8E00CF514D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B109A8D718001D8E00CF514D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B109A8D918001D8E00CF514D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B109A8DD18001D8E00CF514D /* FCSocialAPI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FCSocialAPI-Info.plist"; sourceTree = "<group>"; };
+		B109A8DF18001D8E00CF514D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B109A8E118001D8E00CF514D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B109A8E318001D8E00CF514D /* FCSocialAPI-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FCSocialAPI-Prefix.pch"; sourceTree = "<group>"; };
+		B109A8E418001D8E00CF514D /* FCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCAppDelegate.h; sourceTree = "<group>"; };
+		B109A8E518001D8E00CF514D /* FCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCAppDelegate.m; sourceTree = "<group>"; };
+		B109A8E818001D8E00CF514D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		B109A8EB18001D8E00CF514D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		B109A8ED18001D8E00CF514D /* FCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FCViewController.h; sourceTree = "<group>"; };
+		B109A8EE18001D8E00CF514D /* FCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCViewController.m; sourceTree = "<group>"; };
+		B109A8F018001D8E00CF514D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		B109A8F618001D8E00CF514D /* FCSocialAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FCSocialAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B109A8F718001D8E00CF514D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B109A8FF18001D8E00CF514D /* FCSocialAPITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FCSocialAPITests-Info.plist"; sourceTree = "<group>"; };
+		B109A90118001D8E00CF514D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B109A90318001D8E00CF514D /* FCSocialAPITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCSocialAPITests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B109A8CF18001D8E00CF514D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B109A8D818001D8E00CF514D /* CoreGraphics.framework in Frameworks */,
+				B109A8DA18001D8E00CF514D /* UIKit.framework in Frameworks */,
+				B109A8D618001D8E00CF514D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B109A8F318001D8E00CF514D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B109A8F818001D8E00CF514D /* XCTest.framework in Frameworks */,
+				B109A8FA18001D8E00CF514D /* UIKit.framework in Frameworks */,
+				B109A8F918001D8E00CF514D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B109A8C918001D8E00CF514D = {
+			isa = PBXGroup;
+			children = (
+				B109A8DB18001D8E00CF514D /* FCSocialAPI */,
+				B109A8FD18001D8E00CF514D /* FCSocialAPITests */,
+				B109A8D418001D8E00CF514D /* Frameworks */,
+				B109A8D318001D8E00CF514D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B109A8D318001D8E00CF514D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B109A8D218001D8E00CF514D /* FCSocialAPI.app */,
+				B109A8F618001D8E00CF514D /* FCSocialAPITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B109A8D418001D8E00CF514D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B109A8D518001D8E00CF514D /* Foundation.framework */,
+				B109A8D718001D8E00CF514D /* CoreGraphics.framework */,
+				B109A8D918001D8E00CF514D /* UIKit.framework */,
+				B109A8F718001D8E00CF514D /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B109A8DB18001D8E00CF514D /* FCSocialAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B109A8E418001D8E00CF514D /* FCAppDelegate.h */,
+				B109A8E518001D8E00CF514D /* FCAppDelegate.m */,
+				B109A8E718001D8E00CF514D /* Main_iPhone.storyboard */,
+				B109A8EA18001D8E00CF514D /* Main_iPad.storyboard */,
+				B109A8ED18001D8E00CF514D /* FCViewController.h */,
+				B109A8EE18001D8E00CF514D /* FCViewController.m */,
+				B109A8F018001D8E00CF514D /* Images.xcassets */,
+				B109A8DC18001D8E00CF514D /* Supporting Files */,
+			);
+			path = FCSocialAPI;
+			sourceTree = "<group>";
+		};
+		B109A8DC18001D8E00CF514D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B109A8DD18001D8E00CF514D /* FCSocialAPI-Info.plist */,
+				B109A8DE18001D8E00CF514D /* InfoPlist.strings */,
+				B109A8E118001D8E00CF514D /* main.m */,
+				B109A8E318001D8E00CF514D /* FCSocialAPI-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B109A8FD18001D8E00CF514D /* FCSocialAPITests */ = {
+			isa = PBXGroup;
+			children = (
+				B109A90318001D8E00CF514D /* FCSocialAPITests.m */,
+				B109A8FE18001D8E00CF514D /* Supporting Files */,
+			);
+			path = FCSocialAPITests;
+			sourceTree = "<group>";
+		};
+		B109A8FE18001D8E00CF514D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B109A8FF18001D8E00CF514D /* FCSocialAPITests-Info.plist */,
+				B109A90018001D8E00CF514D /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B109A8D118001D8E00CF514D /* FCSocialAPI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B109A90718001D8E00CF514D /* Build configuration list for PBXNativeTarget "FCSocialAPI" */;
+			buildPhases = (
+				B109A8CE18001D8E00CF514D /* Sources */,
+				B109A8CF18001D8E00CF514D /* Frameworks */,
+				B109A8D018001D8E00CF514D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FCSocialAPI;
+			productName = FCSocialAPI;
+			productReference = B109A8D218001D8E00CF514D /* FCSocialAPI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B109A8F518001D8E00CF514D /* FCSocialAPITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B109A90A18001D8E00CF514D /* Build configuration list for PBXNativeTarget "FCSocialAPITests" */;
+			buildPhases = (
+				B109A8F218001D8E00CF514D /* Sources */,
+				B109A8F318001D8E00CF514D /* Frameworks */,
+				B109A8F418001D8E00CF514D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B109A8FC18001D8E00CF514D /* PBXTargetDependency */,
+			);
+			name = FCSocialAPITests;
+			productName = FCSocialAPITests;
+			productReference = B109A8F618001D8E00CF514D /* FCSocialAPITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B109A8CA18001D8E00CF514D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = FC;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Alejandro Barros";
+				TargetAttributes = {
+					B109A8F518001D8E00CF514D = {
+						TestTargetID = B109A8D118001D8E00CF514D;
+					};
+				};
+			};
+			buildConfigurationList = B109A8CD18001D8E00CF514D /* Build configuration list for PBXProject "FCSocialAPI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B109A8C918001D8E00CF514D;
+			productRefGroup = B109A8D318001D8E00CF514D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B109A8D118001D8E00CF514D /* FCSocialAPI */,
+				B109A8F518001D8E00CF514D /* FCSocialAPITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B109A8D018001D8E00CF514D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B109A8EC18001D8E00CF514D /* Main_iPad.storyboard in Resources */,
+				B109A8F118001D8E00CF514D /* Images.xcassets in Resources */,
+				B109A8E918001D8E00CF514D /* Main_iPhone.storyboard in Resources */,
+				B109A8E018001D8E00CF514D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B109A8F418001D8E00CF514D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B109A90218001D8E00CF514D /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B109A8CE18001D8E00CF514D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B109A8E218001D8E00CF514D /* main.m in Sources */,
+				B109A8E618001D8E00CF514D /* FCAppDelegate.m in Sources */,
+				B109A8EF18001D8E00CF514D /* FCViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B109A8F218001D8E00CF514D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B109A90418001D8E00CF514D /* FCSocialAPITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B109A8FC18001D8E00CF514D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B109A8D118001D8E00CF514D /* FCSocialAPI */;
+			targetProxy = B109A8FB18001D8E00CF514D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B109A8DE18001D8E00CF514D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B109A8DF18001D8E00CF514D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B109A8E718001D8E00CF514D /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B109A8E818001D8E00CF514D /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		B109A8EA18001D8E00CF514D /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B109A8EB18001D8E00CF514D /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		B109A90018001D8E00CF514D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B109A90118001D8E00CF514D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B109A90518001D8E00CF514D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B109A90618001D8E00CF514D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B109A90818001D8E00CF514D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FCSocialAPI/FCSocialAPI-Prefix.pch";
+				INFOPLIST_FILE = "FCSocialAPI/FCSocialAPI-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B109A90918001D8E00CF514D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FCSocialAPI/FCSocialAPI-Prefix.pch";
+				INFOPLIST_FILE = "FCSocialAPI/FCSocialAPI-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		B109A90B18001D8E00CF514D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FCSocialAPI.app/FCSocialAPI";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FCSocialAPI/FCSocialAPI-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FCSocialAPITests/FCSocialAPITests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		B109A90C18001D8E00CF514D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FCSocialAPI.app/FCSocialAPI";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FCSocialAPI/FCSocialAPI-Prefix.pch";
+				INFOPLIST_FILE = "FCSocialAPITests/FCSocialAPITests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B109A8CD18001D8E00CF514D /* Build configuration list for PBXProject "FCSocialAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B109A90518001D8E00CF514D /* Debug */,
+				B109A90618001D8E00CF514D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B109A90718001D8E00CF514D /* Build configuration list for PBXNativeTarget "FCSocialAPI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B109A90818001D8E00CF514D /* Debug */,
+				B109A90918001D8E00CF514D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		B109A90A18001D8E00CF514D /* Build configuration list for PBXNativeTarget "FCSocialAPITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B109A90B18001D8E00CF514D /* Debug */,
+				B109A90C18001D8E00CF514D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B109A8CA18001D8E00CF514D /* Project object */;
+}
