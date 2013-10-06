@@ -7,8 +7,9 @@
 //
 
 #import "FCViewController.h"
+#import "FCSocialAPI.h"
 
-@interface FCViewController ()
+@interface FCViewController () <FCSocialAPIDelegate>
 
 @end
 
@@ -17,13 +18,72 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    [[FCSocialAPI sharedInstance] setDelegate:self];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - FCSocialAPI Actions
+- (IBAction)connectToTwitter:(UIButton *)sender
+{
+    [[FCSocialAPI sharedInstance] connectTo:FCSocialAPITwitterMode];
+}
+
+- (IBAction)checkTwitterStatus:(UIButton *)sender
+{
+    if ([[FCSocialAPI sharedInstance] isConnectedTo:FCSocialAPITwitterMode]){
+        NSLog(@"--- Connected to Twitter");
+        NSLog(@"%@", [[FCSocialAPI sharedInstance] getTwitterUser]);
+    } else {
+        NSLog(@"--- Not connected to Twitter");
+    }
+}
+
+- (IBAction)endTwitterConnection:(UIButton *)sender
+{
+    [[FCSocialAPI sharedInstance] disconnectFrom:FCSocialAPITwitterMode];
+}
+
+- (IBAction)searchHashtags:(UIButton *)sender
+{
+    [[FCSocialAPI sharedInstance] fetchTweetsForHashtags:@[@"#VanityFR", @"#VogueFR"] withLimit:20 andLanguaje:@"fr"];
+}
+
+#pragma mark - FCSocialAPIDelegate
+- (void)FCSocialApi:(FCSocialAPI *)socialAPI connectionForMode:(FCSocialAPIMode)socialMode didChangeStatusTo:(FCSocialAPIConnectionStatus)connectionStatus
+{
+    if (connectionStatus == FCSocialAPIConnectionStatusSuccess){
+        if (socialMode == FCSocialAPITwitterMode){
+            NSLog(@"--- Twitter connection was succesfull");
+        } else if(socialMode == FCSocialAPIFacebookMode){
+            NSLog(@"--- Facebook connection was succesfull");
+        }
+    } else  if (connectionStatus == FCSocialAPIConnectionStatusFailed){
+        if (socialMode == FCSocialAPITwitterMode){
+            NSLog(@"--- Twitter connection failed");
+        } else if(socialMode == FCSocialAPIFacebookMode){
+            NSLog(@"--- Facebook connection was failed");
+        }
+    } else if (connectionStatus == FCSocialAPIConnectionStatusEnded){
+        if (socialMode == FCSocialAPITwitterMode){
+            NSLog(@"--- Twitter connection ended");
+        } else if(socialMode == FCSocialAPIFacebookMode){
+            NSLog(@"--- Facebook connection was ended");
+        }
+    }
+}
+
+- (void)FCSocialApi:(FCSocialAPI *)socialAPI tweetsRequestDidFailWithError:(NSError *)error
+{
+    NSLog(@"--- Request for tweets failed with error %@", error);
+}
+
+- (void)FCSocialApi:(FCSocialAPI *)socialAPI tweetsRequestDidSuccessWith:(NSArray *)tweets
+{
+    NSLog(@"---  Request for tweets succesfull with data %@", tweets);
 }
 
 @end

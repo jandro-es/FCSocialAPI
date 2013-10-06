@@ -22,6 +22,16 @@
 		B109A8FA18001D8E00CF514D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109A8D918001D8E00CF514D /* UIKit.framework */; };
 		B109A90218001D8E00CF514D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B109A90018001D8E00CF514D /* InfoPlist.strings */; };
 		B109A90418001D8E00CF514D /* FCSocialAPITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A90318001D8E00CF514D /* FCSocialAPITests.m */; };
+		B109A91018001E5F00CF514D /* FCSocialAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A90F18001E5F00CF514D /* FCSocialAPI.m */; };
+		B109A91118001E5F00CF514D /* FCSocialAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A90F18001E5F00CF514D /* FCSocialAPI.m */; };
+		B109A91518001F7900CF514D /* FCTwitterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A91418001F7900CF514D /* FCTwitterManager.m */; };
+		B109A91618001F7900CF514D /* FCTwitterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A91418001F7900CF514D /* FCTwitterManager.m */; };
+		B109A9191800286300CF514D /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109A9181800286300CF514D /* Accounts.framework */; };
+		B109A91C18002F8A00CF514D /* TwitterURLS.plist in Resources */ = {isa = PBXBuildFile; fileRef = B109A91B18002F8A00CF514D /* TwitterURLS.plist */; };
+		B109A91D18002F8A00CF514D /* TwitterURLS.plist in Resources */ = {isa = PBXBuildFile; fileRef = B109A91B18002F8A00CF514D /* TwitterURLS.plist */; };
+		B109A91F180030D600CF514D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109A91E180030D600CF514D /* Social.framework */; };
+		B109A9231800518600CF514D /* FCTwitterUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A9221800518600CF514D /* FCTwitterUserModel.m */; };
+		B109A9241800518600CF514D /* FCTwitterUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A9221800518600CF514D /* FCTwitterUserModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +65,15 @@
 		B109A8FF18001D8E00CF514D /* FCSocialAPITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FCSocialAPITests-Info.plist"; sourceTree = "<group>"; };
 		B109A90118001D8E00CF514D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B109A90318001D8E00CF514D /* FCSocialAPITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FCSocialAPITests.m; sourceTree = "<group>"; };
+		B109A90E18001E5F00CF514D /* FCSocialAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCSocialAPI.h; path = FCSocialAPI/FCSocialAPI.h; sourceTree = "<group>"; };
+		B109A90F18001E5F00CF514D /* FCSocialAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCSocialAPI.m; path = FCSocialAPI/FCSocialAPI.m; sourceTree = "<group>"; };
+		B109A91318001F7900CF514D /* FCTwitterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCTwitterManager.h; path = FCSocialAPI/Managers/FCTwitterManager.h; sourceTree = "<group>"; };
+		B109A91418001F7900CF514D /* FCTwitterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCTwitterManager.m; path = FCSocialAPI/Managers/FCTwitterManager.m; sourceTree = "<group>"; };
+		B109A9181800286300CF514D /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		B109A91B18002F8A00CF514D /* TwitterURLS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TwitterURLS.plist; path = urls/TwitterURLS.plist; sourceTree = "<group>"; };
+		B109A91E180030D600CF514D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		B109A9211800518600CF514D /* FCTwitterUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCTwitterUserModel.h; path = FCSocialAPI/Models/FCTwitterUserModel.h; sourceTree = "<group>"; };
+		B109A9221800518600CF514D /* FCTwitterUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCTwitterUserModel.m; path = FCSocialAPI/Models/FCTwitterUserModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B109A91F180030D600CF514D /* Social.framework in Frameworks */,
+				B109A9191800286300CF514D /* Accounts.framework in Frameworks */,
 				B109A8D818001D8E00CF514D /* CoreGraphics.framework in Frameworks */,
 				B109A8DA18001D8E00CF514D /* UIKit.framework in Frameworks */,
 				B109A8D618001D8E00CF514D /* Foundation.framework in Frameworks */,
@@ -103,8 +124,9 @@
 		B109A8D418001D8E00CF514D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B109A8D518001D8E00CF514D /* Foundation.framework */,
+				B109A9171800284F00CF514D /* Mandatory Frameworks */,
 				B109A8D718001D8E00CF514D /* CoreGraphics.framework */,
+				B109A8D518001D8E00CF514D /* Foundation.framework */,
 				B109A8D918001D8E00CF514D /* UIKit.framework */,
 				B109A8F718001D8E00CF514D /* XCTest.framework */,
 			);
@@ -114,6 +136,7 @@
 		B109A8DB18001D8E00CF514D /* FCSocialAPI */ = {
 			isa = PBXGroup;
 			children = (
+				B109A90D18001DCB00CF514D /* FCSocialAPI */,
 				B109A8E418001D8E00CF514D /* FCAppDelegate.h */,
 				B109A8E518001D8E00CF514D /* FCAppDelegate.m */,
 				B109A8E718001D8E00CF514D /* Main_iPhone.storyboard */,
@@ -153,6 +176,53 @@
 				B109A90018001D8E00CF514D /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B109A90D18001DCB00CF514D /* FCSocialAPI */ = {
+			isa = PBXGroup;
+			children = (
+				B109A91218001F4F00CF514D /* Managers */,
+				B109A90E18001E5F00CF514D /* FCSocialAPI.h */,
+				B109A90F18001E5F00CF514D /* FCSocialAPI.m */,
+			);
+			name = FCSocialAPI;
+			sourceTree = "<group>";
+		};
+		B109A91218001F4F00CF514D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				B109A9201800515100CF514D /* Models */,
+				B109A91A18002F6300CF514D /* urls */,
+				B109A91318001F7900CF514D /* FCTwitterManager.h */,
+				B109A91418001F7900CF514D /* FCTwitterManager.m */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
+		B109A9171800284F00CF514D /* Mandatory Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B109A91E180030D600CF514D /* Social.framework */,
+				B109A9181800286300CF514D /* Accounts.framework */,
+			);
+			name = "Mandatory Frameworks";
+			sourceTree = "<group>";
+		};
+		B109A91A18002F6300CF514D /* urls */ = {
+			isa = PBXGroup;
+			children = (
+				B109A91B18002F8A00CF514D /* TwitterURLS.plist */,
+			);
+			name = urls;
+			sourceTree = "<group>";
+		};
+		B109A9201800515100CF514D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B109A9211800518600CF514D /* FCTwitterUserModel.h */,
+				B109A9221800518600CF514D /* FCTwitterUserModel.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +302,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B109A91C18002F8A00CF514D /* TwitterURLS.plist in Resources */,
 				B109A8EC18001D8E00CF514D /* Main_iPad.storyboard in Resources */,
 				B109A8F118001D8E00CF514D /* Images.xcassets in Resources */,
 				B109A8E918001D8E00CF514D /* Main_iPhone.storyboard in Resources */,
@@ -243,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B109A91D18002F8A00CF514D /* TwitterURLS.plist in Resources */,
 				B109A90218001D8E00CF514D /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,6 +328,9 @@
 			files = (
 				B109A8E218001D8E00CF514D /* main.m in Sources */,
 				B109A8E618001D8E00CF514D /* FCAppDelegate.m in Sources */,
+				B109A91518001F7900CF514D /* FCTwitterManager.m in Sources */,
+				B109A9231800518600CF514D /* FCTwitterUserModel.m in Sources */,
+				B109A91018001E5F00CF514D /* FCSocialAPI.m in Sources */,
 				B109A8EF18001D8E00CF514D /* FCViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,7 +339,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B109A91118001E5F00CF514D /* FCSocialAPI.m in Sources */,
+				B109A91618001F7900CF514D /* FCTwitterManager.m in Sources */,
 				B109A90418001D8E00CF514D /* FCSocialAPITests.m in Sources */,
+				B109A9241800518600CF514D /* FCTwitterUserModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
