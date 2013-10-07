@@ -49,7 +49,7 @@
 
 - (IBAction)searchHashtags:(UIButton *)sender
 {
-    [[FCSocialAPI sharedInstance] fetchTweetsForHashtags:@[@"#VanityFR", @"#VogueFR"] withLimit:20 andLanguaje:@"fr"];
+    [[FCSocialAPI sharedInstance] fetchTweetsForHashtags:@[@"#iOS7", @"#OSX"] withLimit:20 andLanguaje:@"en"];
 }
 
 #pragma mark - FCSocialAPIDelegate
