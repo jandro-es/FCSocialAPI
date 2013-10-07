@@ -29,8 +29,9 @@ typedef NS_ENUM(NSUInteger, FCSocialAPIConnectionStatus) {
 
 @optional
 - (void)FCSocialApi:(FCSocialAPI *)socialAPI connectionForMode:(FCSocialAPIMode)socialMode didChangeStatusTo:(FCSocialAPIConnectionStatus)connectionStatus;
-- (void)FCSocialApi:(FCSocialAPI *)socialAPI tweetsRequestDidSuccessWith:(NSArray *)tweets;
+- (void)FCSocialApi:(FCSocialAPI *)socialAPI tweetsRequestDidSuccessWith:(NSDictionary *)tweets;
 - (void)FCSocialApi:(FCSocialAPI *)socialAPI tweetsRequestDidFailWithError:(NSError *)error;
+- (void)FCSocialApi:(FCSocialAPI *)socialAPI didParseDataToTweets:(NSArray *)tweets;
 @end
 
 @interface FCSocialAPI : NSObject
@@ -43,7 +44,7 @@ typedef NS_ENUM(NSUInteger, FCSocialAPIConnectionStatus) {
 - (BOOL)isConnectedTo:(FCSocialAPIMode)socialMode;
 
 - (FCTwitterUserModel *)getTwitterUser;
-- (void)fetchTweetsForHashtags:(NSArray *)hashtags withLimit:(NSUInteger)limit andLanguaje:(NSString *)lang;
+- (void)fetchTweetsForHashtags:(NSArray *)hashtags withLimit:(NSUInteger)limit andLanguage:(NSString *)lang;
 
 + (FCSocialAPI *)sharedInstance;
 

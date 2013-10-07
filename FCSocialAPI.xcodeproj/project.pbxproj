@@ -32,6 +32,7 @@
 		B109A91F180030D600CF514D /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B109A91E180030D600CF514D /* Social.framework */; };
 		B109A9231800518600CF514D /* FCTwitterUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A9221800518600CF514D /* FCTwitterUserModel.m */; };
 		B109A9241800518600CF514D /* FCTwitterUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B109A9221800518600CF514D /* FCTwitterUserModel.m */; };
+		B140C599180369E1009C3D7F /* FCTweetModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B140C598180369E1009C3D7F /* FCTweetModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,8 @@
 		B109A91E180030D600CF514D /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		B109A9211800518600CF514D /* FCTwitterUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCTwitterUserModel.h; path = FCSocialAPI/Models/FCTwitterUserModel.h; sourceTree = "<group>"; };
 		B109A9221800518600CF514D /* FCTwitterUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCTwitterUserModel.m; path = FCSocialAPI/Models/FCTwitterUserModel.m; sourceTree = "<group>"; };
+		B140C597180369E1009C3D7F /* FCTweetModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FCTweetModel.h; path = FCSocialAPI/Models/FCTweetModel.h; sourceTree = "<group>"; };
+		B140C598180369E1009C3D7F /* FCTweetModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FCTweetModel.m; path = FCSocialAPI/Models/FCTweetModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -221,6 +224,8 @@
 			children = (
 				B109A9211800518600CF514D /* FCTwitterUserModel.h */,
 				B109A9221800518600CF514D /* FCTwitterUserModel.m */,
+				B140C597180369E1009C3D7F /* FCTweetModel.h */,
+				B140C598180369E1009C3D7F /* FCTweetModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -326,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B140C599180369E1009C3D7F /* FCTweetModel.m in Sources */,
 				B109A8E218001D8E00CF514D /* main.m in Sources */,
 				B109A8E618001D8E00CF514D /* FCAppDelegate.m in Sources */,
 				B109A91518001F7900CF514D /* FCTwitterManager.m in Sources */,
@@ -553,6 +559,7 @@
 				B109A90918001D8E00CF514D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B109A90A18001D8E00CF514D /* Build configuration list for PBXNativeTarget "FCSocialAPITests" */ = {
 			isa = XCConfigurationList;
@@ -561,6 +568,7 @@
 				B109A90C18001D8E00CF514D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

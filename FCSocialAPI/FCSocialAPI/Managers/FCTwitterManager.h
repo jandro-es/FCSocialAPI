@@ -15,9 +15,9 @@
 
 @optional
 - (void)FCTwitterManager:(FCTwitterManager *)manager didChangeConnectionStatusTo:(NSUInteger)connectionStatus;
-- (void)FCTwitterManager:(FCTwitterManager *)manager didCompleteTweetsRequestsWith:(NSArray *)tweets;
+- (void)FCTwitterManager:(FCTwitterManager *)manager didCompleteTweetsRequestsWith:(NSDictionary *)tweets;
 - (void)FCTwitterManager:(FCTwitterManager *)manager didFailedTweetsRequestsWithError:(NSError *)error;
-
+- (void)FCTwitterManager:(FCTwitterManager *)manager didParseDataToTweet:(NSArray *)tweets;
 @end
 
 @interface FCTwitterManager : NSObject
@@ -28,7 +28,7 @@
 
 - (void)startConnection;
 - (void)endConnection;
-- (void)fetchTweetsForHastags:(NSArray *)hashtags withLimit:(NSUInteger)limit andLanguaje:(NSString *)lang;
+- (void)fetchTweetsForHastags:(NSArray *)hashtags withLimit:(NSUInteger)limit andLanguage:(NSString *)lang;
 
 + (FCTwitterManager *)sharedInstance;
 

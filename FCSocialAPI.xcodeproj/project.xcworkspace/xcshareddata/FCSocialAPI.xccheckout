@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>7CD964B5-8C57-4A20-9E3B-0515ABF4899A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FCSocialAPI</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C44809FE-6636-4ED9-89FC-CDDAC6D60999</key>
+		<string>ssh://github-jandro/jandro-es/FCSocialAPI.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FCSocialAPI.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C44809FE-6636-4ED9-89FC-CDDAC6D60999</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github-jandro/jandro-es/FCSocialAPI.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C44809FE-6636-4ED9-89FC-CDDAC6D60999</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C44809FE-6636-4ED9-89FC-CDDAC6D60999</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FCSocialAPI</string>
+		</dict>
+	</array>
+</dict>
+</plist>

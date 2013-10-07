@@ -9,6 +9,7 @@
 #import "FCTwitterManager.h"
 #import <Accounts/Accounts.h>
 #import <Social/Social.h>
+#import "FCTweetModel.h"
 
 @interface FCTwitterManager()
 
@@ -94,7 +95,7 @@
     }];
 }
 
-- (void)fetchTweetsForHastags:(NSArray *)hashtags withLimit:(NSUInteger)limit andLanguaje:(NSString *)lang
+- (void)fetchTweetsForHastags:(NSArray *)hashtags withLimit:(NSUInteger)limit andLanguage:(NSString *)lang
 {
     if (_isConnected){
         NSString *path = [[NSBundle mainBundle] pathForResource:@"TwitterURLS" ofType:@"plist"];
@@ -128,12 +129,13 @@
         [aRequest performRequestWithHandler:^(NSData *responseData, NSHTTPURLResponse *urlResponse, NSError *error){
             if ([urlResponse statusCode] == 200){
                 NSError *parseError = nil;
-                NSArray *data = [NSJSONSerialization JSONObjectWithData:responseData
+                NSDictionary *data = [NSJSONSerialization JSONObjectWithData:responseData
                                                                      options:NSJSONReadingMutableLeaves
                                                                        error:&parseError];
                 if ([_delegate respondsToSelector:@selector(FCTwitterManager:didCompleteTweetsRequestsWith:)]){
                     [_delegate FCTwitterManager:self didCompleteTweetsRequestsWith:data];
                 }
+                [self createTweetsCollectionWith:data];
             } else {
                 if ([_delegate respondsToSelector:@selector(FCTwitterManager:didFailedTweetsRequestsWithError:)]){
                     [_delegate FCTwitterManager:self didFailedTweetsRequestsWithError:error];
@@ -144,7 +146,7 @@
     
 }
 
-#pragma mark - Data fillers
+#pragma mark - Data fillers & parsers
 - (void)createUserWithDictionary:(NSDictionary *)aDictionary
 {
     if (self.user == nil) self.user = [[FCTwitterUserModel alloc] init];
@@ -158,6 +160,24 @@
     _user.userFriendsCount = [[aDictionary objectForKey:@""] unsignedIntegerValue];
     
     NSLog(@"%@", _user);
+}
+
+- (void)createTweetsCollectionWith:(NSDictionary *)data
+{
+    if (data){
+        NSArray *statuses = [data objectForKey:@"statuses"];
+        if ([statuses count] > 0){
+            NSMutableArray *tweetCollection = [[NSMutableArray alloc] initWithCapacity:10];
+            for (NSDictionary* entry in statuses)
+            {
+                FCTweetModel *tweet = [[FCTweetModel alloc] initWithData:entry];
+                [tweetCollection addObject:tweet];
+            }
+            if ([_delegate respondsToSelector:@selector(FCTwitterManager:didParseDataToTweet:)]){
+                [_delegate FCTwitterManager:self didParseDataToTweet:[tweetCollection copy]];
+            }
+        }
+    }
 }
 
 #pragma mark - Singleton class method

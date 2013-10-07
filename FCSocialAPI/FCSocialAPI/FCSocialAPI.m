@@ -69,9 +69,9 @@
     return [[FCTwitterManager sharedInstance] user];
 }
 
-- (void)fetchTweetsForHashtags:(NSArray *)hashtags withLimit:(NSUInteger)limit andLanguaje:(NSString *)lang;
+- (void)fetchTweetsForHashtags:(NSArray *)hashtags withLimit:(NSUInteger)limit andLanguage:(NSString *)lang;
 {
-    [[FCTwitterManager sharedInstance] fetchTweetsForHastags:hashtags withLimit:limit andLanguaje:lang];
+    [[FCTwitterManager sharedInstance] fetchTweetsForHastags:hashtags withLimit:limit andLanguage:lang];
 }
 
 #pragma mark - FCTwitterManagerDelegate
@@ -83,7 +83,7 @@
     }
 }
 
-- (void)FCTwitterManager:(FCTwitterManager *)manager didCompleteTweetsRequestsWith:(NSArray *)tweets
+- (void)FCTwitterManager:(FCTwitterManager *)manager didCompleteTweetsRequestsWith:(NSDictionary *)tweets
 {
     if ([_delegate respondsToSelector:@selector(FCSocialApi:tweetsRequestDidSuccessWith:)]){
         [_delegate FCSocialApi:self tweetsRequestDidSuccessWith:tweets];
@@ -94,6 +94,13 @@
 {
     if ([_delegate respondsToSelector:@selector(FCSocialApi:tweetsRequestDidFailWithError:)]){
         [_delegate FCSocialApi:self tweetsRequestDidFailWithError:error];
+    }
+}
+
+- (void)FCTwitterManager:(FCTwitterManager *)manager didParseDataToTweet:(NSArray *)tweets
+{
+    if ([_delegate respondsToSelector:@selector(FCSocialApi:didParseDataToTweets:)]){
+        [_delegate FCSocialApi:self didParseDataToTweets:tweets];
     }
 }
 

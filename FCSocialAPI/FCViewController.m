@@ -8,6 +8,7 @@
 
 #import "FCViewController.h"
 #import "FCSocialAPI.h"
+#import "FCTweetModel.h"
 
 @interface FCViewController () <FCSocialAPIDelegate>
 
@@ -49,7 +50,7 @@
 
 - (IBAction)searchHashtags:(UIButton *)sender
 {
-    [[FCSocialAPI sharedInstance] fetchTweetsForHashtags:@[@"#iOS7", @"#OSX"] withLimit:20 andLanguaje:@"en"];
+    [[FCSocialAPI sharedInstance] fetchTweetsForHashtags:@[@"#iOS7", @"#OSX"] withLimit:20 andLanguage:@"en"];
 }
 
 #pragma mark - FCSocialAPIDelegate
@@ -81,9 +82,16 @@
     NSLog(@"--- Request for tweets failed with error %@", error);
 }
 
-- (void)FCSocialApi:(FCSocialAPI *)socialAPI tweetsRequestDidSuccessWith:(NSArray *)tweets
+- (void)FCSocialApi:(FCSocialAPI *)socialAPI tweetsRequestDidSuccessWith:(NSDictionary *)tweets
 {
     NSLog(@"---  Request for tweets succesfull with data %@", tweets);
+}
+
+- (void)FCSocialApi:(FCSocialAPI *)socialAPI didParseDataToTweets:(NSArray *)tweets
+{
+    for (FCTweetModel *tweet in tweets){
+        NSLog(@"%@", tweet);
+    }
 }
 
 @end
